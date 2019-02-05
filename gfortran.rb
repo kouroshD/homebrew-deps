@@ -13,6 +13,7 @@ class Gfortran < Formula
   option 'enable-profiled-build', 'Make use of profile guided optimization when bootstrapping GCC'
   option 'check', 'Run the make check fortran. This is for maintainers.'
   option 'enable-multilib', 'Build with multilib support' if MacOS.prefer_64_bit?
+  option 'enable-multilib', 'Build with multilib support' if Hardware::CPU.is_64_bit?
 
   depends_on 'gmp'
   depends_on 'libmpc'
